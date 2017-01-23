@@ -1,0 +1,605 @@
+/************************************************************************************/
+/*                               COMMON                                             */
+/************************************************************************************/
+
+.octo-stale-release {
+     border-color: black;
+     color: white;
+     background: #788C73;
+ }
+
+.octo-fresh-release {
+    border-color: black;
+    color: white;
+    background: #4E824E;
+}
+
+/************************************************************************************/
+/*                               ICONS & SPINNER                                    */
+/************************************************************************************/
+/*noinspection CssUnknownTarget*/
+@font-face {
+    font-family: 'icomoon';
+    src:url('/edp-teamcity/assets/fonts/icomoon.eot?-9vtuxj');
+    src:url('/edp-teamcity/assets/fonts/icomoon.eot?#iefix-9vtuxj') format('embedded-opentype'),
+    url('/edp-teamcity/assets/fonts/icomoon.woff?-9vtuxj') format('woff'),
+    url('/edp-teamcity/assets/fonts/icomoon.ttf?-9vtuxj') format('truetype'),
+    url('/edp-teamcity/assets/fonts/icomoon.svg?-9vtuxj#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-tick:before {
+    font-size: 2em !important;
+    content: "\e603";
+}
+.icon-spinner:before {
+    content: "\e600";
+}
+.icon-notification:before {
+    font-size: 2em !important;
+    content: "\e604";
+}
+.icon-clock:before {
+    content: "\e601";
+}
+.icon-user:before {
+    content: "\e602";
+}
+
+[class^="octo-icon-"], [class*=" octo-icon-"] {
+    font-family: 'icomoon';
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.octo-icon-tick:before {
+    font-size: 2em !important;
+    content: "\e603";
+}
+.octo-icon-spinner:before {
+    content: "\e600";
+}
+.octo-icon-notification:before {
+    font-size: 2em !important;
+    content: "\e604";
+}
+.octo-icon-clock:before {
+    content: "\e601";
+}
+.octo-icon-user:before {
+    content: "\e602";
+}
+
+/************************************************************************************/
+/*                                     OCTOPUS DEPLOY                               */
+/************************************************************************************/
+
+
+.octo-container {
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+    transition: 2s all;
+}
+
+.octo-container .title {
+    width:100%;
+    text-align: center;
+    font-weight: bold;
+    font-size:1.5em;
+}
+
+.octo-release {
+    display:flex;
+    flex-direction: row;
+    padding:10px;
+    margin-bottom:5px;
+}
+
+.octo-vcontainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding-left:20px;
+}
+
+.octo-project-details{
+    display:flex;
+    flex-direction: row;
+}
+
+.octo-deployed-to{
+
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+
+div.dots {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/************************************************************************************/
+/*                                BUILD STATUS                                      */
+/************************************************************************************/
+
+.recent-builds-container{
+    display: flex;
+    flex-direction: column;
+    height:100%;
+    border-right:2px solid white;
+    padding:0 10px 0 10px;
+    width: 65%;
+    transition:2s all;
+}
+
+.recent-builds-container.expanded {
+    width:100%;
+    transition:2s all;
+}
+
+.recent-builds-container .title {
+    width:100%;
+    text-align: center;
+    font-weight: bold;
+    font-size:1.5em;
+}
+
+.finished-build {
+    text-align: left;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    width: 100%;
+
+}
+
+.finished-build .project-details {
+    white-space: nowrap;
+    overflow: hidden;
+    width:65%;
+    display:flex;
+    flex-direction: column;
+    height:100%;
+}
+
+.finished-build .build-details {
+    width:30%;
+    height:100%;
+}
+
+.finished-build .icon {
+    width: 8%;
+    margin: auto;
+    text-align: center;
+}
+
+.finished-build .project-name {
+    font-size: xx-large;
+    color: white;
+    height:55%;
+}
+
+.finished-build .build-name {
+    font-size: 2em;
+    color: white;
+    height:45%;
+}
+
+.finished-build .timestamp {
+    width: 80%;
+    text-align: right;
+}
+
+.finished-build .developer {
+    width: 80%;
+    text-align: right;
+}
+
+.build-details .build-icon {
+    width:20%;
+    text-align: center;
+    padding-top:5px;
+}
+
+/************************************************************************************/
+/*    Keyblade *******/
+/************************************************************************************/
+
+.octo-dashboard {
+    display: flex;
+    flex-direction: row;
+    height:100%;
+}
+
+.octo-vcontainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.octo-inner-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 50%;
+    padding-bottom:3px;
+}
+
+.octo-inner-container-full-width {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    padding-bottom:3px;
+}
+
+.octo-inner-container .progress {
+    width: 100%;
+    margin-bottom:0;
+    margin-right:10px;
+}
+
+.octo-recent-builds-container{
+    display: flex;
+    flex-direction: column;
+    height:100%;
+    padding:0 5px 0 5px;
+    width: 100%;
+    transition:2s all;
+}
+
+.octo-project {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    padding:0 5px 0 5px;
+    width: 100%;
+    transition:1s all;
+    border-bottom: 1px solid darkgray;
+    padding-bottom: 15px;
+}
+
+.octo-right-panel {
+    display: flex;
+    flex-direction: column;
+    height:100%;
+    padding:0 5px 0 5px;
+    width: 50%;
+    transition:2s all;
+}
+
+.octo-adtempus {
+    display: flex;
+    flex-direction: row;
+    height:100%;
+    flex-wrap:wrap;
+    padding:0 5px 0 5px;
+    width: 100%;
+    transition:2s all;
+}
+
+.octo-monitur {
+    display: flex;
+    flex-direction: row;
+    height:100%;
+    flex-wrap:wrap;
+    padding:0 5px 0 5px;
+    width: 100%;
+    transition:2s all;
+}
+
+/*.octo-recent-builds-container.octo-expanded {*/
+    /*width:100%;*/
+    /*transition:2s all;*/
+/*}*/
+
+.octo-title {
+    width:100%;
+    text-align: center;
+    font-weight: bold;
+    font-size:1.5em;
+}
+
+.octo-finished-build {
+    text-align: left;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    width: 48%;
+    margin-left:1%;
+}
+
+.octo-finished-build .octo-project-details {
+    white-space: nowrap;
+    overflow: hidden;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    height:100%;
+}
+
+.octo-finished-build .octo-build-details {
+    width:100%;
+    display:flex;
+    flex-direction:row;
+}
+
+.octo-finished-build .octo-icon {
+    width: 15%;
+    margin: auto;
+    text-align: center;
+}
+
+.octo-finished-build .octo-project-name {
+     font-size: large;
+     color: white;
+     height:55%;
+ }
+
+.octo-finished-build .octo-project-name.running  {
+    color: black;
+}
+
+.octo-finished-build .octo-build-name {
+    font-size: 2em;
+    color: white;
+    height:45%;
+}
+
+.octo-finished-build .octo-timestamp {
+    width: 90%;
+    text-align: left;
+}
+
+.octo-finished-build .octo-developer {
+    width: 90%;
+    text-align: left;
+}
+
+.octo-build-details .octo-build-icon {
+    width:20px;
+    text-align: left;
+    padding-top:3px;
+}
+
+
+/************************************************************************************/
+/*                                BUILD HEALTH                                      */
+/************************************************************************************/
+
+.health-container{
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    height:100%;
+    overflow:hidden;
+    /*padding:0 10px 0 10px;*/
+}
+
+.health-container .title {
+    width:100%;
+    text-align: center;
+    font-weight: bold;
+    font-size:1.5em;
+}
+
+.health-section {
+    height: 33%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.health-section.top-border {
+    border-top : 2px solid white;
+}
+
+.health-section .timespan {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1em;
+    transform: rotate(270deg);
+    transform-origin: top left;
+    position: absolute;
+    left:0;
+}
+
+.timespan.today {
+    top:26%;
+}
+
+.timespan.week {
+    top:63%;
+}
+
+.timespan.month {
+    top:97%;
+}
+
+.health-section .buildcount {
+    text-align: center;
+    font-weight: bold;
+    font-size:1.1em;
+    position: absolute;
+    right:5%;
+}
+
+.buildcount.today {
+    top:20%;
+}
+
+.buildcount.week {
+    top:55%;
+}
+
+.buildcount.month {
+    top:90%;
+}
+
+.health-section .graph {
+    width:90%;
+    margin-left:10%;
+}
+
+.jqplot-data-label {
+    font-size:20px;
+}
+
+.health-section .values {
+    width:100%;
+}
+
+.loading {
+    width:100%;
+    text-align: center;
+    font-size:medium;
+    line-height: 200px;
+}
+
+/*---------------*/
+
+.animate-repeat.ng-enter,
+.animate-repeat.ng-leave {
+    display: block;
+    position: relative;
+}
+
+.animate-repeat.ng-enter {
+    -webkit-animation: enter 600ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+    animation: enter 600ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+}
+
+.animate-repeat.ng-leave {
+    -webkit-animation: leave 600ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+    animation: leave 600ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+}
+
+/*.animate-repeat.ng-enter,*/
+/*.animate-repeat.ng-leave {*/
+    /*-webkit-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;*/
+    /*-moz-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;*/
+    /*-ms-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;*/
+    /*-o-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;*/
+    /*transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;*/
+    /*position: relative;*/
+    /*display: block;*/
+/*}*/
+
+/*.animate-repeat.ng-enter,*/
+/*.animate-repeat.ng-leave.ng-leave-active,{*/
+    /*-webkit-transform: scaleY(0);*/
+    /*-moz-transform: scaleY(0);*/
+    /*-ms-transform: scaleY(0);*/
+    /*-o-transform: scaleY(0);*/
+    /*transform: scaleY(0);*/
+    /*height: 0px;*/
+    /*opacity: 0;*/
+/*}*/
+
+/*.animate-repeat.ng-leave,*/
+/*.animate-repeat.ng-enter.ng-enter-active,{*/
+    /*-webkit-transform: scaleY(1);*/
+    /*-moz-transform: scaleY(1);*/
+    /*-ms-transform: scaleY(1);*/
+    /*-o-transform: scaleY(1);*/
+    /*transform: scaleY(1);*/
+    /*height: 30px;*/
+    /*opacity: 1;*/
+/*}*/
+
+@-webkit-keyframes enter {
+    from {
+        opacity: 0;
+        height: 0;
+        top: -70px;
+    }
+    75% {
+        top: 15px;
+    }
+    to {
+        opacity: 1;
+        height: 30px;
+        top: 0;
+    }
+}
+@keyframes enter {
+    from {
+        opacity: 0;
+        height: 0;
+        top: -70px;
+    }
+    75% {
+        top: 15px;
+    }
+    to {
+        opacity: 1;
+        height: 30px;
+        top: 0;
+    }
+}
+
+
+@-webkit-keyframes leave {
+    to {
+        opacity: 0;
+        height: 0;
+        top: -70px;
+    }
+    25% {
+        top: 15px;
+    }
+    from {
+        opacity: 1;
+        height: 30px;
+        top: 0;
+    }
+}
+@keyframes leave {
+    to {
+        opacity: 0;
+        height: 0;
+        top: -70px;
+    }
+    25% {
+        top: 15px;
+    }
+    from {
+        opacity: 1;
+        height: 30px;
+        top: 0;
+    }
+}
+
+

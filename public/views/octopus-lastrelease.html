@@ -1,0 +1,21 @@
+<div class="octo-container">
+    <div class="title">Latest Releases</div>
+        <div ng-repeat="release in releases" class="octo-release octo-{{release.status}}-release">
+            <div class="octo-icon">
+                <div class="octo-icon-notification" ng-if="release.status !== 'fresh'"></div>
+                <div class="octo-icon-tick" ng-if="release.status === 'fresh'"></div>
+            </div>
+            <div class="octo-vcontainer">
+                <div class="octo-project-details">
+                    <div class="octo-project-name dots" style="font-size:{{releaseFontSize}}px">{{release.label}}</div>
+                    <!--<div class="octo-project-name dots" style="font-size:{{releaseFontSize}}px">{{release.project}}</div>
+                    <div class="octo-deployed-to" style="font-size:{{releaseFontSize}}px">&nbsp;deployed to&nbsp;</div>
+                    <div class="octo-environment-name dots" style="font-size:{{releaseFontSize}}px">{{release.environment}}</div>-->
+                </div>
+                <div class="octo-release-details">
+                    <div class="octo-release-date">{{hoursAgo(release.deployDate)}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

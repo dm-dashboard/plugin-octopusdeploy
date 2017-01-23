@@ -1,0 +1,45 @@
+{
+    "name": "edp-octopusdeploy",
+    "version": "0.0.1",
+    "description": "An Octopus Deploy plugin for the DM Dashboard",
+    "author": {
+        "name": "Duane McKibbin <duane.mckibbin@gmail.com>"
+    },
+    "mean": "0.3.3",
+    "engines": {
+        "node": "0.10.x",
+        "npm": "1.4.x"
+    },
+    "dependencies": {},
+    "license": "MIT",
+    "dashboard" : {
+        "displayName": "Octopus Deploy",
+        "enabled" : true,
+        "module": "server/octopus",
+        "widgets" : [
+            {
+                "name" : "Time since last release",
+                "description" : "Shows the time for the last successful release of a project. Goes red if over a threshold.",
+                "directive" : "octopus-last-release"
+            }
+        ],
+        "defaultSettings" : {
+            "servers" : [
+                {
+                    "active" : false,
+                    "name" : "Default",
+                    "apikey" : "",
+                    "url" : "http://localhost"
+                }],
+            "lastReleaseTracking" : [
+                {
+                    "server" : "Default",
+                    "project" : "",
+                    "environment" : "",
+                    "threshold" : 0
+                }
+            ]
+
+        }
+    }
+}
